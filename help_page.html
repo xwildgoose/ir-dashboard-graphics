@@ -91,10 +91,9 @@
       padding: 12px 22px; border-radius: 12px; background: var(--royal); color: #fff;
       font-size: 14.5px; font-weight: 700; text-decoration: none;
       box-shadow: 0 8px 24px rgba(0, 112, 192, 0.32);
-      animation: pulse 2.8s ease-in-out infinite;
-      transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+      animation: pulse 5s ease-in-out infinite;
+      transition: box-shadow 0.18s ease;
     }
-    .cta:hover { background: var(--royal-600); transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0, 112, 192, 0.45); }
     .cta:active { transform: translateY(0); }
     .cta:focus-visible { outline: 3px solid rgba(0, 112, 192, 0.4); outline-offset: 3px; }
     .cta svg { width: 17px; height: 17px; }
@@ -115,9 +114,9 @@
       overflow: hidden;
       display: flex; flex-direction: column;
       text-decoration: none; color: inherit; cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: box-shadow 0.2s ease;
+      animation: cardfloat 7s ease-in-out infinite;
     }
-    .chat:hover { transform: translateY(-3px); box-shadow: 0 26px 58px rgba(13, 35, 80, 0.24); }
     .chat:focus-visible { outline: 3px solid rgba(0, 112, 192, 0.4); outline-offset: 3px; }
 
     .chat-head { display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-bottom: 1px solid #eef1f5; flex: 0 0 auto; }
@@ -139,7 +138,7 @@
     .chat-input { display: flex; align-items: center; gap: 9px; margin: 0 13px 11px; padding: 7px 8px 7px 13px; background: #f1f4f8; border-radius: 12px; flex: 0 0 auto; }
     .chat-input .ph { flex: 1; font-size: 12px; color: #8b98a6; }
     .send { width: 32px; height: 32px; flex: 0 0 auto; border-radius: 10px; background: var(--navy); display: flex; align-items: center; justify-content: center; color: #fff; transition: transform 0.16s ease, background 0.16s ease, box-shadow 0.16s ease; }
-    .chat:hover .send { background: var(--navy-hover); transform: scale(1.08); box-shadow: 0 6px 16px rgba(20, 48, 107, 0.4); }
+    /* send button rides with the card's self-running float */
     .send svg { width: 15px; height: 15px; }
 
     /* ---------- keyframes ---------- */
@@ -149,7 +148,8 @@
     @keyframes driftB { from { transform: translate(0,0) rotate(1deg); } to { transform: translate(-10px,-7px) rotate(-1deg); } }
     @keyframes driftC { from { transform: translate(0,0) rotate(-1deg); } to { transform: translate(6px,7px) rotate(1.5deg); } }
     @keyframes blink { 0%, 60%, 100% { opacity: 0.35; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-3px); } }
-    @keyframes pulse { 0%, 100% { box-shadow: 0 8px 24px rgba(0, 112, 192, 0.30); } 50% { box-shadow: 0 10px 32px rgba(0, 112, 192, 0.52); } }
+    @keyframes pulse { 0%, 100% { transform: translateY(0); box-shadow: 0 8px 24px rgba(0, 112, 192, 0.30); } 50% { transform: translateY(-2px); box-shadow: 0 13px 34px rgba(0, 112, 192, 0.52); } }
+    @keyframes cardfloat { 0%, 100% { transform: translateY(0); box-shadow: 0 18px 44px rgba(13, 35, 80, 0.16); } 50% { transform: translateY(-3px); box-shadow: 0 26px 58px rgba(13, 35, 80, 0.22); } }
 
     /* ---------- stack only on genuinely small screens ---------- */
     @media (max-width: 620px) {
@@ -163,8 +163,8 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .layout, .cta, .chip { animation: none !important; opacity: 0.88 !important; }
-      .layout, .cta { opacity: 1 !important; }
+      .layout, .cta, .chip, .chat { animation: none !important; opacity: 0.88 !important; }
+      .layout, .cta, .chat { opacity: 1 !important; }
       .typing span { animation: none; opacity: 0.6; }
       .cta, .chat, .send { transition: none; }
     }
