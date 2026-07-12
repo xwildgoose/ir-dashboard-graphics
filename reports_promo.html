@@ -5,28 +5,27 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 body{font-family:var(--font);background:transparent;overflow:hidden}
-.banner{position:relative;width:100%;height:100%;min-height:300px;overflow:hidden;border-radius:16px;
-  background:radial-gradient(130% 150% at 17% 32%,#22478d 0%,#12295c 45%,#091634 100%)}
+.banner{position:relative;width:100%;height:100%;min-height:0;overflow:hidden;border-radius:16px;
+  background:radial-gradient(130% 160% at 15% 34%,#22478d 0%,#12295c 46%,#091634 100%)}
 #fx{position:absolute;inset:0;width:100%;height:100%;z-index:1}
-.glow{position:absolute;left:9%;top:50%;width:360px;height:360px;transform:translateY(-50%);border-radius:50%;
-  background:radial-gradient(circle,rgba(0,140,255,.45),transparent 68%);filter:blur(8px);z-index:1;pointer-events:none;animation:breathe 6s ease-in-out infinite}
+.glow{position:absolute;left:6%;top:50%;width:210px;height:210px;transform:translateY(-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(0,140,255,.42),transparent 68%);filter:blur(7px);z-index:1;pointer-events:none;animation:breathe 6s ease-in-out infinite}
 @keyframes breathe{0%,100%{opacity:.7}50%{opacity:1}}
-.wrap{position:relative;z-index:2;height:100%;display:flex;align-items:center;padding:26px 44px 26px 20px;gap:8px}
-.covers{position:relative;width:330px;height:100%;flex:0 0 auto}
-.cv{position:absolute;left:50%;top:50%;width:170px;margin-left:-85px;margin-top:-109px;border-radius:6px;
-  box-shadow:0 22px 52px rgba(0,8,32,.6),0 0 0 1px rgba(255,255,255,.09);opacity:0;will-change:transform}
+.wrap{position:relative;z-index:2;height:100%;display:flex;align-items:center;padding:16px 30px 16px 16px;gap:20px}
+.covers{position:relative;width:220px;height:100%;flex:0 0 auto}
+.cv{position:absolute;left:50%;top:50%;width:120px;margin-left:-60px;margin-top:-77px;border-radius:5px;
+  box-shadow:0 16px 40px rgba(0,8,32,.6),0 0 0 1px rgba(255,255,255,.09);opacity:0;will-change:transform}
 .cv0{z-index:1}.cv2{z-index:2}.cv1{z-index:3}
-.promo{flex:1;min-width:0;color:#fff;padding-left:8px}
-.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;font-weight:700;color:#8fc0ff;opacity:0;animation:fade .8s .3s forwards}
-.promo h1{font-size:29px;font-weight:800;letter-spacing:-.02em;line-height:1.12;margin-top:10px;text-shadow:0 2px 24px rgba(0,60,160,.5);opacity:0;animation:fade .8s .5s forwards}
-.promo p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.66);margin-top:12px;max-width:440px;opacity:0;animation:fade .8s .7s forwards}
-.cta{display:inline-flex;align-items:center;gap:9px;margin-top:20px;background:#fff;color:var(--royal);font-size:14px;font-weight:700;
-  padding:12px 22px;border-radius:11px;box-shadow:0 10px 30px rgba(0,120,255,.35);opacity:0;
+.promo{flex:1;min-width:0;color:#fff}
+.eyebrow{font-size:10px;letter-spacing:3.5px;text-transform:uppercase;font-weight:700;color:#8fc0ff;opacity:0;animation:fade .8s .3s forwards}
+.promo h1{font-size:22px;font-weight:800;letter-spacing:-.02em;line-height:1.14;margin-top:7px;text-shadow:0 2px 20px rgba(0,60,160,.5);opacity:0;animation:fade .8s .5s forwards}
+.promo p{font-size:12.5px;line-height:1.5;color:rgba(255,255,255,.66);margin-top:8px;max-width:400px;opacity:0;animation:fade .8s .7s forwards}
+.cta{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:#fff;color:var(--royal);font-size:12.5px;font-weight:700;
+  padding:10px 18px;border-radius:10px;box-shadow:0 10px 26px rgba(0,120,255,.35);opacity:0;
   animation:fade .8s .95s forwards,pulse 3.2s 1.6s ease-in-out infinite}
-.cta svg{width:16px;height:16px}
-@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@keyframes pulse{0%,100%{box-shadow:0 10px 30px rgba(0,120,255,.35)}50%{box-shadow:0 14px 40px rgba(0,150,255,.6)}}
-@media(max-width:720px){.covers{width:210px}.cv{width:120px;margin-left:-60px;margin-top:-77px}.promo h1{font-size:22px}.wrap{padding:18px 22px}}
+.cta svg{width:15px;height:15px}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{box-shadow:0 10px 26px rgba(0,120,255,.35)}50%{box-shadow:0 13px 36px rgba(0,150,255,.6)}}
 </style></head>
 <body>
 <div class="banner">
@@ -40,9 +39,9 @@ body{font-family:var(--font);background:transparent;overflow:hidden}
     </div>
     <div class="promo">
       <div class="eyebrow">Related Reports</div>
-      <h1>Want the full story behind the numbers?</h1>
-      <p>Dive into our enrolment reports, factbooks, and surveys &mdash; the complete breakdowns and analysis from the Office of Institutional Research.</p>
-      <div class="cta">Explore the Reports Library
+      <h1>Want the full breakdown?</h1>
+      <p>Explore our enrolment reports, factbooks &amp; surveys &mdash; complete breakdowns from Institutional Research.</p>
+      <div class="cta">View the Reports Library
         <svg viewBox="0 0 24 24" fill="none" stroke="#0070c0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
     </div>
   </div>
@@ -52,8 +51,8 @@ body{font-family:var(--font);background:transparent;overflow:hidden}
   var cv=document.getElementById('fx'),ctx=cv.getContext('2d'),W,H;
   function resize(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;}
   resize();window.addEventListener('resize',resize);
-  var N=52,P=[];
-  for(var i=0;i<N;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2+0.6,vx:(Math.random()-.5)*0.22,vy:(Math.random()-.5)*0.22,a:Math.random()*0.45+0.12});
+  var N=40,P=[];
+  for(var i=0;i<N;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.9+0.6,vx:(Math.random()-.5)*0.2,vy:(Math.random()-.5)*0.2,a:Math.random()*0.45+0.12});
   function particles(){
     ctx.clearRect(0,0,W,H);
     for(var i=0;i<P.length;i++){var p=P[i];p.x+=p.vx;p.y+=p.vy;
@@ -63,15 +62,15 @@ body{font-family:var(--font);background:transparent;overflow:hidden}
       ctx.fillStyle=g;ctx.beginPath();ctx.arc(p.x,p.y,p.r*4.2,0,7);ctx.fill();}
   }
   var covers=[
-    {el:document.querySelector('.cv0'),x:-92,y:14,rot:-13,amp:7,ph:0,spd:0.0011},
-    {el:document.querySelector('.cv1'),x:0,y:-10,rot:-1,amp:10,ph:2.1,spd:0.0009},
-    {el:document.querySelector('.cv2'),x:92,y:14,rot:12,amp:8,ph:4.2,spd:0.0012}
+    {el:document.querySelector('.cv0'),x:-52,y:6,rot:-12,amp:6,ph:0,spd:0.0011},
+    {el:document.querySelector('.cv1'),x:-2,y:-7,rot:-1,amp:8,ph:2.1,spd:0.0009},
+    {el:document.querySelector('.cv2'),x:48,y:6,rot:11,amp:6,ph:4.2,spd:0.0012}
   ];
   var t0=performance.now();
   function frame(now){
     var t=now-t0,intro=Math.min(t/900,1),e=1-Math.pow(1-intro,3);
     for(var i=0;i<covers.length;i++){var c=covers[i];
-      var bob=Math.sin(now*c.spd+c.ph)*c.amp*e, rbob=Math.sin(now*c.spd*0.8+c.ph)*1.4*e;
+      var bob=Math.sin(now*c.spd+c.ph)*c.amp*e, rbob=Math.sin(now*c.spd*0.8+c.ph)*1.3*e;
       var x=c.x*e,y=c.y*e+bob,rot=c.rot*e+rbob,sc=0.9+0.1*e;
       c.el.style.transform='translate('+x+'px,'+y+'px) rotate('+rot+'deg) scale('+sc+')';
       c.el.style.opacity=e;}
